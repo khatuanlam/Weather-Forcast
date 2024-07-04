@@ -15,7 +15,7 @@ const MainLayout = () => {
 
     const fetchAPI = async () => {
         try {
-            const res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${CONFIG.API_KEY}&q=${city || CONFIG.City}&days=8`)
+            const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${CONFIG.API_KEY}&q=${city || CONFIG.City}&days=8`)
             if (!res.ok) {
                 throw new Error('Network response was not ok');
             }
